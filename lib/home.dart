@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({
@@ -74,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 print('Page finished loading: $url');
 
                 _webViewController
+                    // ignore: deprecated_member_use
                     .evaluateJavascript("javascript:(function() { " +
                         "var footer = document.getElementsByTagName('footer')[0];" +
                         "footer.parentNode.removeChild(footer);" +
